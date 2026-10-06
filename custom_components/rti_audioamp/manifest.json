@@ -1,0 +1,12 @@
+{
+  "domain": "rti_audioamp",
+  "name": "RTI Audio Distribution Amp",
+  "codeowners": ["@ralphtorchia"],
+  "config_flow": true,
+  "documentation": "https://github.com/ralphtorchia/rti_audioamp",
+  "homeassistant": "2026.8.0",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/ralphtorchia/rti_audioamp/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

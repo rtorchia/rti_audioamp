@@ -1,0 +1,54 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to RTI Audio Amp",
+        "description": "Enter the connection details for your RTI audio distribution amp (e.g. AD-4x), and optionally give each of its 4 sources a friendly name (e.g. 'Sonos').",
+        "data": {
+          "host": "IP address or hostname",
+          "password": "Password",
+          "scan_interval": "Poll interval (seconds)",
+          "source_1_name": "Source 1 name",
+          "source_2_name": "Source 2 name",
+          "source_3_name": "Source 3 name",
+          "source_4_name": "Source 4 name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the device. Check the IP address and try again.",
+      "unknown": "Unexpected error, check the Home Assistant logs."
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "RTI Audio Amp Options",
+        "data": {
+          "password": "Password",
+          "scan_interval": "Poll interval (seconds)",
+          "source_1_name": "Source 1 name",
+          "source_2_name": "Source 2 name",
+          "source_3_name": "Source 3 name",
+          "source_4_name": "Source 4 name"
+        }
+      }
+    }
+  },
+  "entity": {
+    "switch": {
+      "power": { "name": "Power" },
+      "mute": { "name": "Mute" }
+    },
+    "select": {
+      "source": { "name": "Source" },
+      "group": { "name": "Group" }
+    },
+    "number": {
+      "volume": { "name": "Volume" }
+    }
+  }
+}
