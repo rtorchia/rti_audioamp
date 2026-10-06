@@ -93,5 +93,6 @@ MIT — see [LICENSE](LICENSE).
 
 ## Credits
 
-Based on an original Python script by Ralph Torchia for communicating
+Based on an original Python script (unreleased) by Ralph Torchia for communicating
 with the RTI AD-4x over its local HTTP CGI endpoints.
+This integrations was created by vibe coding.
