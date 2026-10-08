@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1
+
+- Power/Mute switches now update immediately and hold the commanded
+  value while the amp catches up (up to 12s), instead of snapping back
+  to the old state when polled mid-change. If the amp never applies the
+  change, a warning is logged and the amp's real state is shown.
+- Debug logging now captures longer device responses.
+
 ## 0.1.0
 
 - Initial release: UI config flow, 4 zone devices, power/mute switches,
