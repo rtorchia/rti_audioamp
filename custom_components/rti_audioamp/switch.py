@@ -52,11 +52,11 @@ class RtiZonePowerSwitch(RtiZoneEntity, SwitchEntity):
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         await self.coordinator.api.async_set_power(self.zone, True)
-        await self.coordinator.async_request_refresh()
+        self.coordinator.apply_optimistic(self.zone, "power", "1")
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         await self.coordinator.api.async_set_power(self.zone, False)
-        await self.coordinator.async_request_refresh()
+        self.coordinator.apply_optimistic(self.zone, "power", "0")
 
 
 class RtiZoneMuteSwitch(RtiZoneEntity, SwitchEntity):
@@ -73,8 +73,8 @@ class RtiZoneMuteSwitch(RtiZoneEntity, SwitchEntity):
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         await self.coordinator.api.async_set_mute(self.zone, True)
-        await self.coordinator.async_request_refresh()
+        self.coordinator.apply_optimistic(self.zone, "mute", "1")
 
     async def async_turn_off(self, **kwargs: Any) -> None:
         await self.coordinator.api.async_set_mute(self.zone, False)
-        await self.coordinator.async_request_refresh()
+        self.coordinator.apply_optimistic(self.zone, "mute", "0")

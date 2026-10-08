@@ -116,7 +116,7 @@ class RtiAudioAmpApi:
                         resp.raise_for_status()
                         text = await resp.text()
                         _LOGGER.debug(
-                            "RTI amp response (%s): %s", resp.status, text[:200]
+                            "RTI amp response (%s): %s", resp.status, text[:800]
                         )
                         return text
             except (aiohttp.ClientError, asyncio.TimeoutError) as err:
