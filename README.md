@@ -58,6 +58,10 @@ the integration's **Configure** option.
 | Group | `select` | `None`, `1`–`4` |
 | Volume | `number` | 0–100% slider |
 
+## Example Card
+
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/8cfebb8c-1364-4994-9426-b75be76ec8c7" />
+
 ## Troubleshooting
 
 - Enable debug logging for live request/response details:
